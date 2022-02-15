@@ -1,0 +1,77 @@
+@import-normalize;
+@import 'global';
+
+body{
+  display: flex;
+  justify-content: center;
+  background: rgb(234, 234, 234);
+}
+#root{
+  border: 1px solid black;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  min-height: 100%;
+  width: 50rem;
+  & > div{
+    display: flex;
+  }
+}
+
+aside {
+  width: 30%;
+  padding: 1.5rem;
+  & > div{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    max-width: 7rem;
+  }
+}
+main{
+  width: 70%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  textarea{
+    width: 100%;
+  }
+}
+.exp, .education{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  & > div:first-of-type{
+    margin-top: -0.5rem;
+  }
+  & > div{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 8px;
+    position: relative;
+    align-items: center;
+    padding: .5rem 1rem;
+    & > div{
+      justify-self: center;
+      text-align: center;
+    }
+    &>svg,.btns{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+ 
+}
+svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
