@@ -20,7 +20,6 @@ class General extends Component{
       <Field defval={entr[1]} key={entr[0]} keyobj={entr[0]} isEdit={this.state.isEdit} update={this.props.update}/>);
     return ( 
     <div>
-      <h2>General</h2>
       {elements}
       <button onClick={this.switchEdit}>Edit</button>
     </div> );
